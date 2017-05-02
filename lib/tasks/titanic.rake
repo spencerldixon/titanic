@@ -17,21 +17,18 @@ namespace :db do
       system 'bundle exec rails db:drop RAILS_ENV=development'
       system 'bundle exec rails db:create RAILS_ENV=development'
 
-      project_name  = ""#How do I get this?
+      project_name  = Rails.application.config.session_options[:key].sub(/^_/,'').sub(/_session/,'')
       database_name = "#{project_name}_development"
-      file          = ""
+      file          = Dir["/titanic/*"].first
 
       # Import the db
       system "psql #{database_name} < #{file}"
 
       # Finish and cleanup
       # - delete temp folder and db copy
+      FileUtils.remove_dir "titanic"
 
       puts "Done! 🛳 "
-    end
-
-    desc "Grabs a copy of the db from remote and places it in /titanic"
-    task :download => :environment do
     end
   end
 end
