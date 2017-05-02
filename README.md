@@ -33,7 +33,7 @@ TITANIC_SSH_FILEPATH=~/backups/database.psql
 
 ## Usage
 
-`rails db:titanic:sync` - Pulls the db from the server and replaces your local development db with it
+`rake db:titanic:sync` - Pulls the db from the server and replaces your local development db with it
 
 ## Development
 

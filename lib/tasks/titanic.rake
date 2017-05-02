@@ -9,8 +9,8 @@ namespace :db do
       system "scp #{ENV["TITANIC_SSH_USERNAME"]}@#{ENV["TITANIC_SSH_HOST"]}:#{ENV["TITANIC_SSH_FILEPATH"]} #{Rails.root}/tmp/titanic"
 
       # Drop the current db
-      system 'RAILS_ENV=development bundle exec rails db:drop'
-      system 'RAILS_ENV=development bundle exec rails db:create'
+      system 'RAILS_ENV=development bundle exec rake db:drop'
+      system 'RAILS_ENV=development bundle exec rake db:create'
 
       project_name  = Rails.application.config.session_options[:key].sub(/^_/,'').sub(/_session/,'')
       config        = Rails.configuration.database_configuration
