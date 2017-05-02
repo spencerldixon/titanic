@@ -6,12 +6,7 @@ namespace :db do
       FileUtils.mkdir "titanic"
 
       # Pull db from remote to local folder
-      Net::SCP.download!(
-        ENV["TITANIC_SSH_HOST"],
-        ENV["TITANIC_SSH_USERNAME"],
-        ENV["TITANIC_SSH_FILEPATH"],
-        "/titanic"
-      )
+      system "scp #{ENV["TITANIC_SSH_USERNAME"]}@#{ENV["TITANIC_SSH_HOST"]}:#{ENV["TITANIC_SSH_FILEPATH"]} /titanic"
 
       # Drop the current db
       system 'bundle exec rails db:drop RAILS_ENV=development'
