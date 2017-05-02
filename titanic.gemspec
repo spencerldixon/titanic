@@ -4,7 +4,7 @@ $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
 require 'titanic/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = "titanic"
+  spec.name          = "titanic-db"
   spec.version       = Titanic::VERSION
   spec.authors       = ["Spencer Dixon"]
   spec.email         = ["spencerlloyddixon@gmail.com"]

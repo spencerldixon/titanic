@@ -8,7 +8,7 @@ Easily sync postgres databases from a remote into your local Rails application v
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'titanic'
+gem 'titanic-db'
 ```
 
 And then execute:
