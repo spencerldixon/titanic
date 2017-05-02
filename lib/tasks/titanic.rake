@@ -24,7 +24,7 @@ namespace :db do
 
       # Finish and cleanup
       # - delete temp folder and db copy
-      FileUtils.remove_dir "#{Rails.root}/titanic/"
+      FileUtils.remove_dir "#{Rails.root}/tmp/titanic/"
 
       puts "Done! 🛳 "
     end
