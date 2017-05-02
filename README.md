@@ -13,11 +13,9 @@ gem 'titanic'
 
 And then execute:
 
-    $ bundle
-
-Or install it yourself as:
-
-    $ gem install titanic
+```ruby
+bundle
+```
 
 Then run the installer...
 
@@ -45,7 +43,7 @@ To install this gem onto your local machine, run `bundle exec rake install`. To 
 
 ## Contributing
 
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/titanic.
+Bug reports and pull requests are welcome on GitHub at https://github.com/spencerldixon/titanic.
 
 
 ## License
