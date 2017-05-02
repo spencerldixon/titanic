@@ -13,7 +13,9 @@ namespace :db do
       system 'bundle exec rails db:create RAILS_ENV=development'
 
       project_name  = Rails.application.config.session_options[:key].sub(/^_/,'').sub(/_session/,'')
-      database_name = "#{project_name}_development"
+      config        = Rails.configuration.database_configuration
+      database_name = config["development"]["database"]
+
       bz2_files     = Dir["/titanic/*.sql.bz2"].each {|file| system "bzip2 -d #{file}" } # Extract any bz2 files
       file          = Dir["/titanic/*"].first
 
