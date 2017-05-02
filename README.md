@@ -3,6 +3,8 @@
 
 Easily sync postgres databases from a remote into your local Rails application via SCP
 
+![](https://media.giphy.com/media/OJw4CDbtu0jde/giphy.gif)
+
 ## Installation
 
 Add this line to your application's Gemfile:
